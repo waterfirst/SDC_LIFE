@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>빛을 만드는 사람들 · OLED 노동자의 하루</title>
+<meta name="description" content="스마트폰용 OLED 패널을 만드는 사람들의 출입 확인과 테이크아웃, 컴퓨터 작업, 단풍나무 아래 식사와 다섯 동료의 산책, 통근버스 대기을 담은 인터랙티브 선화.">
+<style>
+ *{box-sizing:border-box}body{margin:0;min-height:100vh;background:#eae8e2;color:#29383e;display:grid;place-items:center;font-family:"Noto Sans CJK KR","Malgun Gothic",sans-serif}
+ main{width:min(96vw,calc((100svh - 130px)*3/2),1440px);padding:18px 0}
+ .card{position:relative;aspect-ratio:3/2;border-radius:15px;overflow:hidden;isolation:isolate;touch-action:none;--ink:#1c1c1c;box-shadow:0 14px 42px -18px #313b4540,0 0 0 1px #39485322}
+ #scene,#scene svg{width:100%;height:100%;display:block;user-select:none}svg .pp{fill:var(--paper,#fdfcf8)}
+ svg.scrubbing,svg.scrubbing *{cursor:grabbing!important}
+ .heading{position:absolute;top:5.5%;left:3.5%;color:var(--ink);pointer-events:none}
+ .eyebrow{font-size:clamp(6px,.8vw,11px);letter-spacing:.15em;opacity:.65;margin:0 0 7px}
+ h1{font-family:"Noto Serif CJK KR",serif;font-size:clamp(15px,2.25vw,31px);font-weight:500;letter-spacing:-.05em;margin:0}
+ .sub{margin:7px 0 0;font-size:clamp(6px,.86vw,12px);opacity:.7}
+ .time{position:absolute;right:3.5%;top:6%;color:var(--ink);text-align:right;pointer-events:none;font-size:clamp(7px,.85vw,12px)}
+ #clock{display:block;font:500 clamp(13px,1.8vw,25px)/1.4 Georgia,serif;font-variant-numeric:tabular-nums}
+ #caption{position:absolute;bottom:2%;left:4%;right:4%;margin:0;color:var(--ink);text-align:center;font-family:"Noto Serif CJK KR",serif;font-size:clamp(7px,1.1vw,15px);line-height:1.7;pointer-events:none}
+ .toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:15px 0 10px;flex-wrap:wrap}
+ .moments{display:flex;gap:5px;flex-wrap:wrap}button{font:inherit;font-size:12px;border:1px solid #63727c35;background:transparent;border-radius:99px;padding:7px 13px;color:inherit;cursor:pointer}
+ button[aria-pressed=true]{background:#344e5d;color:#fff;border-color:#344e5d}button:hover{border-color:#344e5d}button:focus-visible{outline:2px solid #54849c;outline-offset:3px}svg [role=button]:focus-visible{outline:1px solid currentColor}
+ .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:10px;line-height:1.7;opacity:.65;margin:0}.foot a{color:inherit;text-underline-offset:3px}
+ @media(max-width:650px){main{width:96vw;padding:12px 0}.toolbar{justify-content:center}.foot{justify-content:center;text-align:center}button{font-size:11px;padding:7px 10px}.sub{max-width:150px}.eyebrow{margin-bottom:4px}h1{font-size:15px}.heading{top:5%}}
+</style></head><body><main>
+ <div class="card">
+  <div id="scene"></div>
+  <header class="heading"><p class="eyebrow">OLED · A DAY IN SMALL MOMENTS</p><h1>빛을 만드는 사람들</h1><p class="sub">단풍 아래, 함께 걷고 쉬어 가는 노동자의 하루</p></header>
+  <div class="time"><span id="stage">출근</span><b id="clock">07:30</b></div>
+  <p id="caption" aria-live="polite"></p>
+ </div>
+ <nav class="toolbar" aria-label="하루의 장면 선택">
+  <div class="moments"><button data-stage="arrival">07:30 출근</button><button data-stage="work">10:00 작업</button><button data-stage="lunch">12:12 점심</button><button data-stage="home">18:00 퇴근</button><button data-stage="night">22:00 야간</button></div>
+  <button id="play" aria-pressed="true">시간 멈추기</button>
+ </nav>
+ <p class="foot"><span>해와 달을 끌거나, 사람·단풍나무·검사 장비·버스를 눌러 보세요.</span><span>삼성디스플레이의 OLED 생산을 소재로 한 창작 장면 · 실제 시설·직원·근무표의 재현이 아닙니다. <a href="https://global.samsungdisplay.com/overview" target="_blank" rel="noopener noreferrer">소재 참고</a></span></p>
+</main><script type="module" src="./main.ts"></script></body></html>

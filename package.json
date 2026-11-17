@@ -1,0 +1,19 @@
+{
+  "name": "sdc-life",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "빛을 만드는 사람들 — OLED 노동자의 하루",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json && tsc -p examples/oled-life/tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9"
+  }
+}
